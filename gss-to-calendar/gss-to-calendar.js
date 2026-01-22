@@ -70,6 +70,18 @@ function syncToCalendar(e) {
   // 必須フィールドの存在確認
   if (!eventData.company || !eventData.start || !eventData.status) return;
   
+  // 日付型の確認
+  if (!(eventData.start instanceof Date) || isNaN(eventData.start)) {
+    console.log(`行${row}:  開始日時が無効な形式です`);
+    return;
+  }
+
+  // 終了日時が存在する場合は型チェック
+  if (eventData.end && (!(eventData.end instanceof Date) || isNaN(eventData.end))) {
+    console.log(`行${row}: 終了日時が無効な形式です`);
+    return;
+  }
+
   // 登録対象の選考フェーズかチェック
   if (!CONFIG.TRIGGER_PHASES.includes(eventData.status)) return;
 
