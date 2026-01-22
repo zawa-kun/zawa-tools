@@ -53,7 +53,7 @@ function syncToCalendar(e) {
   // 2. データ取得 & バリデーション
   // -----------------------------------------------------------------------
   
-  const rowData = sheet.getRange(row, 1, 1, 8).getValues()[0];
+  const rowData = sheet.getRange(row, 1, 1, 13).getValues()[0];
   const eventData = {
     company:     rowData[CONFIG.COLUMNS.COMPANY - 1],
     start:      rowData[CONFIG.COLUMNS.START - 1],
