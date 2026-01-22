@@ -110,7 +110,7 @@ function syncToCalendar(e) {
     try {
       existingEvent = calendar.getEventById(eventData.eventId);
     } catch {
-      // カレンダーに存在するイベントとIDが異なるとき、存在しないとき
+      console.log(`イベントID ${eventData.eventId} がカレンダーに見つかりません:  ${error.message}`);
       existingEvent = null;
     }
   }
