@@ -58,7 +58,7 @@ function syncToCalendar(e) {
     company:     rowData[CONFIG.COLUMNS.COMPANY - 1],
     start:      rowData[CONFIG.COLUMNS.START - 1],
     end:        rowData[CONFIG.COLUMNS.END - 1],
-    location:   rowData[CONFIG.COLUMNS. LOCATION - 1] || '', 
+    location:   rowData[CONFIG.COLUMNS.LOCATION - 1] || '', 
     desc:       rowData[CONFIG.COLUMNS.DESC - 1] || '',
     status:     rowData[CONFIG.COLUMNS.STATUS - 1],
     eventId:    rowData[CONFIG.COLUMNS.EVENT_ID - 1],
@@ -135,7 +135,7 @@ function syncToCalendar(e) {
     updateEvent(existingEvent, eventTitle, eventData);
     
     // 念のため前回ステータスを同期（通常は変更なしだが堅牢性向上のため）
-    sheet.getRange(row, CONFIG.COLUMNS. PREV_STATUS).setValue(eventData.status);
+    sheet.getRange(row, CONFIG.COLUMNS.PREV_STATUS).setValue(eventData.status);
   }
 }
 
