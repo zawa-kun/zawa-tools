@@ -3,7 +3,7 @@
 // ========================================================================
 const CONFIG = {
   CALENDAR_ID: 'primary',
-  SHEET_NAME: 'kokochan', // 参照コピー専用シート（直接編集不可）
+  SHEET_NAME: 'kokochan',
   // カラム番号（A列=1, B列=2...）
   COLUMNS: {
     COMPANY: 2,    //  企業名
