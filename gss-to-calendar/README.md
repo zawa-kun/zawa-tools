@@ -2,7 +2,7 @@
 Googleスプレッドシート(GSS)に入力した日付をGoogleカレンダー(GC)に自動同期するツール
 
 ## 使用技術
-- 言語：JavaScript(GAS)
+- 言語：Google Apps Script(JavaScript)
 
 ## システムの仕様
 ### 📁スプレッドシート設計
